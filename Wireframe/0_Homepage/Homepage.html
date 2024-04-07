@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link href="Main.css" rel="stylesheet">
+</head>
+<body>
+<div class="containerHeader">
+    <div>
+        <img alt="Purdue Logo" id="PurdueLogo" src="../Images/Purdue_logo.png">
+    </div>
+    <div>
+        <p id="header">The World of Worked-Out Examples in PL/SQL</p>
+    </div>
+    <div>
+        <img alt="Hamburger Sign" id="HamburgerSign" src="../Images/hamburger.png">
+    </div>
+
+</div>
+
+<div class="containerNav">
+    <div>
+        <p id="Nav">Homepage</p>
+    </div>
+    <div>
+        <p id="SignIn">Use your Purdue Email to:</p>
+    </div>
+    <div>
+        <button class="open-button" onclick="openForm1()">Login</button>
+        <div class="form-popup" id="loginForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Purdue Email</b></label>
+                <input id="email" name="email" placeholder="Enter Your Purdue Email" required type="text">
+
+                <label for="psw"><b>Password</b></label>
+                <input id="psw" name="psw" placeholder="Enter Password" required type="password">
+
+                <button class="btn" type="submit">Login</button>
+                <button class="btn cancel" onclick="closeForm1()" type="button">Close</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <button class="open-button" onclick="openForm2()">Sign Up</button>
+        <div class="form-popup" id="signupForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Sign Up</h1>
+                <label for="email">Purdue Email</label>
+                <label>
+                    <input name="email" placeholder="Enter Your Purdue Email" required type="text">
+                </label>
+
+                <label for="psw"><b>Password</b></label>
+                <label>
+                    <input name="psw" placeholder="Enter Your Password" required type="password">
+                </label>
+                <label for="psw"><b>Re-enter Password</b></label>
+                <label>
+                    <input name="psw" placeholder="Enter Your Password Again" required type="password">
+                </label>
+                <button class="btn" type="submit">Login</button>
+                <button class="btn cancel" onclick="closeForm2()" type="button">Close</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="containerSection">
+    <div id="containerOverview">
+        <p id="overview">Overview</p>
+        <p id="overviewText">This is a web-based application designed to support the learnersourcing workflow used in
+            the PL/SQL programming class. As students, you will be referred as an "Expert" in your familiar contexts.
+            Your task will be to create your own worked-out example by applying specific course topics into a real-world
+            scenario that you are familiar with. In addition, you will also need to work on your classmate's generated
+            worked-out examples and conduct peer review.</p>
+    </div>
+
+    <div id="containerFunfact">
+        <div>
+            <p id="funfact">Fun Fact</p>
+            <a class="funfactLinks" href="">What is Learnersourcing?</a><br>
+            <a class="funfactLinks" href="">What is a worked-out example?</a><br>
+        </div>
+        <div>
+            <a class="funfactLinks" href="">Why you want to be the one in this world?</a><br>
+            <a class="funfactLinks" href="">How did we develop this workflow?</a><br>
+        </div>
+    </div>
+</div>
+
+<div class="containerBody">
+    <div class="containerButtons" id="create">
+        <p class="bodyHeader">Ready to Create?</p>
+        <p class="bodyDescription">Create or Finish Your Worked-Out Examples</p>
+    </div>
+
+    <div class="containerButtons" id="review">
+        <div>
+            <p class="bodyHeader">Review Your Peer's Works</p>
+            <p class="bodyDescription">Conduct Peer Review on Your Classmate-Generated Worked-Out Examples</p>
+        </div>
+    </div>
+
+    <div class="containerButtons" id="challenge">
+        <p class="bodyHeader">Ready for Some Challenges?</p>
+        <p class="bodyDescription">Practice with CERTIFIED Worked-Out Examples</p>
+    </div>
+</div>
+
+<script src="/Main.js"></script>
+<script>
+    function openForm1() {
+        document.getElementById("loginForm").style.display = "block";
+    }
+
+    function closeForm1() {
+        document.getElementById("loginForm").style.display = "none";
+    }
+
+    function openForm2() {
+        document.getElementById("signupForm").style.display = "block";
+    }
+
+    function closeForm2() {
+        document.getElementById("signupForm").style.display = "none";
+    }
+    document.getElementById("create").addEventListener("click", function(){
+        window.location.href = '../Be an Expert/Be an Expert.html';
+    });
+
+    document.getElementById("review").addEventListener("click", function(){
+        window.location.href = '../review.html';
+    });
+
+    document.getElementById("challenge").addEventListener("click", function(){
+        window.location.href = '../Be an Explorer/Be an Explorer.html';
+    });
+
+</script>
+</body>
+</html>
