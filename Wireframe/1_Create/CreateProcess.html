@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../Homepage/Main.css">
+    <link href="../0_Homepage/Main.css" rel="stylesheet">
 </head>
 <body>
 <div class="containerHeader">
     <div>
-        <img id="PurdueLogo" src="/Images/Purdue_logo.png" alt="Purdue Logo">
+        <img alt="Purdue Logo" id="PurdueLogo" src="../Images/Purdue_logo.png">
     </div>
     <div>
         <p id="header">Hey FirstName, show your expertise to this world!</p>
     </div>
     <div>
-        <img alt="Hamburger Sign" id="HamburgerSign" src="/Images/hamburger.png">
+        <img alt="Hamburger Sign" id="HamburgerSign" src="../Images/hamburger.png">
     </div>
 
 </div>
 <div class="header-section">
     <nav class="navigation">
-        <a href="../Homepage/Homepage.html">Home</a> ›
-        <a href="../Be%20an%20Expert/Be%20an%20Expert.html">Be an Expert</a> >
+        <a href="../0_Homepage/Homepage.html">Home</a> ›
+        <a href="../1_Create/CreateOverview.html">Ready to Create?</a> >
         <a href="">Create a NEW Worked-Out Example</a>
     </nav>
     <p class="welcome">Good morning/afternoon/night, Username</p>
 </div>
-<div class="container">
+
+<!-- <div class="container">
     <div class="left-panel">
         <div class="form-section">
             <div>
-                <label>Problem Background</label>
-                <label>Data</label>
-                <label>Solution</label>
-                <label>Self-Review</label>
+                <button>Problem Background</button>
+                <button>Data</button>
+                <button>Solution</button>
+                <button>Self-Review</button>
             </div>
         </div>
 
@@ -55,21 +56,107 @@
 
             <label>Problem Description</label>
             <textarea>Describe the problem of your worked-out example here.</textarea>
-
-
         </div>
+
         <div class="help-panel">
             <h2>Need Help?</h2>
-            <p>Intentionally left blank for later implementation of ChatGPT</p>
+            <p>ChatGPT Implementation is COMING SOON!</p>
         </div>
     </div>
+</div> -->
+
+<!-- Tab links -->
+<div class="tab">
+    <button class="tablinks" onclick="openSection(event, 'Problem')">Problem</button>
+    <button class="tablinks" onclick="openSection(event, 'Data')">Data</button>
+    <button class="tablinks" onclick="openSection(event, 'Solution')">Solution</button>
+    <button class="tablinks" onclick="openSection(event, 'Self-Review')">Self-Review</button>
+  </div>
+  
+  <!-- Tab content -->
+<div id="Problem" class="tabcontent">
+    <h2>Problem Context and Description</h2>
+    <label id="problemtext">Topics Practiced in this worked-out example</label>
+    <label>
+        <select>
+            <option>Basic PL/SQL</option>
+            <option>Function</option>
+            <option>Procedure</option>
+            <option>Triggers and Constraints</option>
+            <option>Others</option>
+        </select>
+    </label>
+
+    <label id="problemtext">Problem Context</label>
+    <textarea>Define the context of your worked-out example here.</textarea>
+
+    <label id="problemtext">Problem Description</label>
+    <textarea>Describe the problem of your worked-out example here.</textarea>
 </div>
+  
+<div id="Data" class="tabcontent">
+    <h2>Data Tables</h2>
+
+    <div class="containerBody">
+        <div id="datatable1">
+            <label id="data">Data Table #1: </label> 
+            <textarea id="tablename">Enter the name for your first data table</textarea>
+            <table id="myTable">
+                <th>Attribute Name</th>
+                <th>Attribute Type</th>
+                <tr>
+                <form id = "myform">
+	                <td><input type="text" id="aname" name="aname" value=""></td>
+                    <td> <input type="text" id="atype" name="atype" value=""></td>
+                </form>
+                </tr>
+            </table>
+            <br>
+
+            <button onclick="myCreateFunction('myTable','aname','atype','myform')">Create row</button>
+            <button onclick="myDeleteFunction('myTable')">Delete row</button>
+        </div>
+    
+        <div id="datatable1">
+            <label id="data">Data Table #2: </label>
+            <textarea id="tablename">Enter the name for your second data table</textarea>
+            <table id="myTable2">
+                <th>Attribute Name</th>
+                <th>Attribute Type</th>
+                <tr>
+                <form id = "myform2">
+	                <td><input type="text" id="aname2" name="aname" value=""></td>
+                    <td> <input type="text" id="atype2" name="atype" value=""></td>
+                </form>
+                </tr>
+            </table>
+            <br>
+
+            <button onclick="myCreateFunction('myTable2','aname2','atype2','myform2')">Create row</button>
+            <button onclick="myDeleteFunction('myTable2')">Delete row</button>
+        </div>
+
+    </div>
+</div>
+  
+<div id="Solution" class="tabcontent">
+    <h2>Step-by-Step Solution</h2>
+    
+</div>
+
+<div id="Self-Review" class="tabcontent">
+</div>
+
+
 <div class="center">
     <input type="submit" value="Cancel and Exit">
     <input type="submit" value="Save and Exit">
     <input type="submit" value="Save and Submit">
 </div>
 
-
+<script src="../../Javascript/Main.js"></script>
 </body>
 </html>
+
+
+
